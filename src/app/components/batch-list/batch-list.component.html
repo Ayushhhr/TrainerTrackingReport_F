@@ -1,0 +1,63 @@
+<!--
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Batch List</h2>
+    </div>
+    <div class="panel-body">
+        <table class = "table table-stripped">
+            <thead>
+                <tr>
+                    <th>Batch-Id</th>
+                    <th>Batch-Name</th>
+                    <th>Creation Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let b of batches | async">
+                    <td>{{b.bid}}</td>
+                    <td>{{b.bname}}</td>
+                    <td>{{b.creation_date}}</td>
+                    <td>
+                        <button (click)="batchDetails(b.bid)" class="btn btn-info" style="margin-left: 40px; background-color: rgb(133, 209, 112); color: black;">Details</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+-->
+
+
+
+     <!--table format-->
+     <div class="tabular--wrapper">
+        <h1 class="main--title">Batch</h1>
+        <div class="table--conatiner">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Batch Name</th>
+                        <th>Creation Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr *ngFor="let b of batches | async">
+                        <td>{{b.bid}}</td>
+                        <td>{{b.bname}}</td>
+                        <td>{{b.creation_date}}</td>
+                        <td><button (click)="batchDetails(b.bid)">Details</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>

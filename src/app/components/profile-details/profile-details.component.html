@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Profile Details</p>
+
+<div class="container">
+    <div class="input-group">
+        <form class="form-inline mr-auto">
+            <input #profileid class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" (click)="profileDetails(profileid.value)" class="btn btn-primary">Search</button>
+         </form>
+    </div>
+
+
+<div *ngIf="profile" class="profile-details">
+    <div>
+        <label for="id"><b>Profile Id:</b></label> {{profile.id}}
+    </div>
+    <div>
+        <label for="name"><b>Name:</b></label> {{profile.firstName}} {{profile.lastName}}
+    </div>
+
+    <div *ngFor="let t of profile.topic" class="profile-details">
+        <p><b>Topic Id:</b> {{t.tid}}</p>
+        <p><b>Topic Name:</b> {{t.tname}}</p>
+        <p><b>Hours:</b> {{t.hours}}</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+

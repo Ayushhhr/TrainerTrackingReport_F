@@ -1,0 +1,55 @@
+<!--
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Course List</h2>
+    </div>
+    <div class="panel-body">
+        <table class = "table table-stripped">
+            <thead>
+                <tr>
+                    <th>Course-Id</th>
+                    <th>Course-Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let c of courses | async">
+                    <td>{{c.cid}}</td>
+                    <td>{{c.cname}}</td>
+                    <td>
+                        <button (click)="courseDetails(c.cid)" class="btn btn-info" style="margin-left: 40px; background-color: rgb(133, 209, 112); color: black;">Details</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+-->
+
+ <!--table format-->
+ <div class="tabular--wrapper">
+    <h1 class="main--title">Courses</h1>
+    <div class="table--conatiner">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Course Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let c of courses | async">
+                    <td>{{c.cid}}</td>
+                    <td>{{c.cname}}</td>
+                    <td><button (click)="courseDetails(c.cid)">Details</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

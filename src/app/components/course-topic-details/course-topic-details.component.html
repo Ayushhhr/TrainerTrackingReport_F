@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Course Details</p>
+
+<div class="container">
+    <div class="input-group">
+        <form class="form-inline mr-auto">
+            <input #coursecid class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" (click)="courseDetails(coursecid.value)" class="btn btn-primary">Search</button>
+         </form>
+    </div>
+
+
+<div *ngIf="course" class="course-details">
+    <div>
+        <label for="id"><b>Course Id:</b></label> {{course.cid}}
+    </div>
+    <div>
+        <label for="name"><b>Course Name:</b></label> {{course.cname}}
+    </div>
+
+    <div *ngFor="let t of course.topic" class="course-details">
+        <p><b>Topic Id:</b> {{t.tid}}</p>
+        <p><b>Topic Name:</b> {{t.tname}}</p>
+        <p><b>Hours:</b> {{t.hours}}</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+

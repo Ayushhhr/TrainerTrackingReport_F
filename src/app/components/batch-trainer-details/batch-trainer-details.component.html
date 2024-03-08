@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+
+    <p class="title">Batch Details</p>
+
+<div class="container">
+    <div class="input-group">
+        <form class="form-inline mr-auto">
+            <input #batchbid class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" (click)="batchDetails(batchbid.value)" class="btn btn-primary">Search</button>
+         </form>
+    </div>
+
+
+<div *ngIf="batch" class="batch-details">
+    <div>
+        <label for="id"><b>Batch Id:</b></label> {{batch.bid}}
+    </div>
+    <div>
+        <label for="name"><b>Batch Name:</b></label> {{batch.bname}}
+    </div>
+    <div>
+        <label for="name"><b>Creation Date:</b></label> {{batch.creation_date}}
+    </div>
+
+    <div *ngFor="let t of batch.trainer" class="subtopic-details">
+        <p><b>Trainer Id:</b> {{t.id}}</p>
+        <p><b>Trainer Name:</b> {{t.name}}</p>
+        <p><b>Email:</b> {{t.email}}</p>
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>
+

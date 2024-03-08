@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Topic Details</p>
+
+<div class="container">
+    <div class="input-group">
+        <form class="form-inline mr-auto">
+            <input #topicid class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" (click)="TopicDetails(topicid.value)" class="btn btn-primary">Search</button>
+         </form>
+    </div>
+
+
+<div *ngIf="topic" class="topic-details">
+    <div>
+        <label for="id"><b>Topic Id:</b></label> {{topic.tid}}
+    </div>
+    <div>
+        <label for="name"><b>Topic Name:</b></label> {{topic.tname}}
+    </div>
+    <div>
+        <label for="hours"><b>Hours:</b></label> {{topic.hours}}
+    </div>
+
+    <div *ngFor="let s of topic.subtopic" class="subtopic-details">
+        <p><b>Subtopic Id:</b> {{s.sid}}</p>
+        <p><b>Subtopic Name:</b> {{s.sname}}</p>
+        <p><b>Hours:</b> {{s.shours}}</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+

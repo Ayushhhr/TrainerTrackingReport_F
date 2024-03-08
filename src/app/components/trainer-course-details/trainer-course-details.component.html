@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Trainer Details</p>
+
+<div class="container">
+    <div class="input-group">
+        <form class="form-inline mr-auto">
+            <input #trainerid class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button type="button" (click)="trainerDetails(trainerid.value)" class="btn btn-primary">Search</button>
+         </form>
+    </div>
+
+
+<div *ngIf="trainer" class="topic-details">
+    <div>
+        <label for="id"><b>Trainer Id:</b></label> {{trainer.id}}
+    </div>
+    <div>
+        <label for="name"><b>Trainer Name:</b></label> {{trainer.name}}
+    </div>
+    <div>
+        <label for="hours"><b>Email:</b></label> {{trainer.email}}
+    </div>
+
+    <div *ngFor="let c of trainer.course" class="course-details">
+        <p><b>Course Id:</b> {{c.cid}}</p>
+        <p><b>Course Name:</b> {{c.cname}}</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+            
+            <ul class="menu">
+                 <li class="active">
+                      <a href="">
+                         <span>Dashboard</span>
+                     </a>
+                    </li>
+                  <li>
+                       <a  [routerLink]="['/listBatch']">
+                           <span>Batch</span>
+                      </a>
+                    </li>
+                    <li>
+                        <a routerLink="/listTrainer">
+                            <span>Trainer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/listCourse">
+                            <span>Coures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/listTopic">
+                            <span>Topic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/listSubtopic">
+                            <span>Subtopic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a href="">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>           
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Symbiosis Distance Learning</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">
+                <div class="serch--box">
+                    <i class="fa-soild fa-search"> </i>
+                        <input type="text" placeholder="Search" >
+                </div>  
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!--
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Trainer List</h2>
+    </div>
+    <div class="panel-body">
+        <table class = "table table-stripped">
+            <thead>
+                <tr>
+                    <th>Trainer-Id</th>
+                    <th>Trainer-Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let t of trainers | async">
+                    <td>{{t.id}}</td>
+                    <td>{{t.name}}</td>
+                    <td>{{t.email}}</td>
+
+                    <td>
+                        <button (click)="trainerDetails(t.id)" class="btn btn-info" style="margin-left: 40px; background-color: rgb(133, 209, 112); color: black;">Details</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+-->
+
+  <!--table format-->
+  <div class="tabular--wrapper">
+    <h1 class="main--title">Trainer</h1>
+    <div class="table--conatiner">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Trainer Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let t of trainers | async">
+                    <td>{{t.id}}</td>
+                    <td>{{t.name}}</td>
+                    <td>{{t.email}}</td>
+
+                    <td><button (click)="trainerDetails(t.id)">Details</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

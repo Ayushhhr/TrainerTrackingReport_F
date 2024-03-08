@@ -1,0 +1,62 @@
+<!--
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Topic List</h2>
+    </div>
+    <div class="panel-body">
+        <table class = "table table-stripped">
+            <thead>
+                <tr>
+                    <th>Topic-Id</th>
+                    <th>Topic-Name</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let t of topics | async">
+                    <td>{{t.tid}}</td>
+                    <td>{{t.tname}}</td>
+                    <td>{{t.hours}}</td>
+
+                    <td>
+                        <button (click)="topicDetails(t.tid)" class="btn btn-info" style="margin-left: 40px; background-color: rgb(133, 209, 112); color: black;">Details</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+-->
+
+ <!--table format-->
+ <div class="tabular--wrapper">
+    <h1 class="main--title">Sub Topics</h1>
+    <div class="table--conatiner">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Subtopic Name</th>
+                    <th>Hours</th>
+                    <th>Taught Hours</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let s of subtopics | async">
+                    <td>{{s.sid}}</td>
+                    <td>{{s.sname}}</td>
+                    <td>{{s.shours}}</td>
+                    <td>0</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

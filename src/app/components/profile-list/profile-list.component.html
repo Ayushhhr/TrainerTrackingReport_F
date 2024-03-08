@@ -1,0 +1,33 @@
+
+ <!--table format-->
+ <div class="tabular--wrapper">
+    <h1 class="main--title">Profile</h1>
+    <div class="table--conatiner">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let p of profiles | async">
+                    <td>{{p.id}}</td>
+                    <td>{{p.firstName}}</td>
+                    <td>{{p.lastName}}</td>
+                    <td>{{p.mobNum}}</td>
+                    <td>{{p.email}}</td>
+                    <td>{{p.address}}</td>
+                    <td><button (click)="profileDetails(p.id)">Details</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
